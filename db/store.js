@@ -6,6 +6,12 @@ class Store{
         this.db.push(note);
         console.log(this.db);
     }
+    deleteNote(id){
+       this.db = this.db.filter(function(note){
+            return note.id !== id;
+        });
+        console.log(this.db);
+    }
 }
 
 var store = new Store();
