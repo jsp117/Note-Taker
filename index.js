@@ -4,6 +4,7 @@ const app = express();
 const store = require("./db/store.js");
 const unique = require("uniqid");
 const fs = require("fs");
+const { set } = require("./db/store.js");
 var PORT = process.env.PORT || 3000;
 
 // process message as json
@@ -29,14 +30,17 @@ app.post("/api/notes", function(req, res) {
     body.id = unique();
     store.createNote(body);
     // console.log("store.db: ", store.db);
-    res.send(true);
+    res.send(JSON.stringify(store.db));
+    // res.send(true);
 });
 
 // delete notes by id
 app.delete("/api/notes/:id", function(req, res){
-    var id = req.body.id;
+    var id = req.params.id;
     store.deleteNote(id);
-    res.send(true);
+    fs.writeFileSync("./db/db.json", JSON.stringify(store.db));
+    // console.log("Test2db: ", store.db);
+    res.send(JSON.stringify(store.db));
 });
 
 app.listen(PORT, function () {
