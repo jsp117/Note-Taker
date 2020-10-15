@@ -9,6 +9,7 @@ Utilizing the Store class, I created the post function that takes the user input
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
+* [Deployed Link](#deployed_link)
 * [Code Snippets](#code_snippets)
 * [Testing](#testing)
 * [Built With](#built_with)
@@ -23,6 +24,9 @@ To install all dependencies, run Npm install in your terminal while opened to th
 To run this application locally, open your terminal to the folder it is located in and type "npm install". When those files are finished downloading type "node index.js" to run the application. You can then navigate on your browser to localhost:3000 to view the site. Click "get started" to navigate to the notes page. You can then type a title in the title text area, and a note in the note text area. From there, you can click the save icon on the top right to save your note. On the left hand side of the screen, you can click your previously saved notes to view them, or click the trash icon to delete them. To write a new note, you can click the pencil icon on the top right.
 
 ![gif Walkthrough](./public/assets/images/noteTaker.gif)
+
+## Deployed_link
+[Note Taker](https://note-taker-jsp.herokuapp.com/)
 
 ## Code Snippets
 This code snippet displays all Express functions used to display different html files, as well as reading from and writing to the db.json file. 
