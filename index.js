@@ -17,18 +17,23 @@ app.get("/notes", function (req, res) {
     res.sendFile(path.join(__dirname, "public/notes.html"));
 });
 
+// display saved notes
+app.get("/api/notes", function(req, res){
+    res.sendFile(path.join(__dirname, "./db/db.json"));
+});
+
 // save notes
 app.post("/api/notes", function(req, res) {
+    // store.db = JSON.parse(fs.readFileSync("./db/db.json", "utf-8"));
     var body = req.body;
     body.id = unique();
     store.createNote(body);
     // console.log("store.db: ", store.db);
-    fs.writeFileSync("./db/db.json", JSON.stringify(store.db));
     res.send(true);
 });
 
 // delete notes by id
-app.delete("/notes", function(req, res){
+app.delete("/api/notes/:id", function(req, res){
     var id = req.body.id;
     store.deleteNote(id);
     res.send(true);
