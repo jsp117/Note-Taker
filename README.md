@@ -23,7 +23,7 @@ To install all dependencies, run Npm install in your terminal while opened to th
 ## Usage
 To run this application locally, open your terminal to the folder it is located in and type "npm install". When those files are finished downloading type "node index.js" to run the application. You can then navigate on your browser to localhost:3000 to view the site. Click "get started" to navigate to the notes page. You can then type a title in the title text area, and a note in the note text area. From there, you can click the save icon on the top right to save your note. On the left hand side of the screen, you can click your previously saved notes to view them, or click the trash icon to delete them. To write a new note, you can click the pencil icon on the top right.
 
-![gif Walkthrough](./public/assets/images/noteTaker.gif)
+![gif Walkthrough](https://raw.githubusercontent.com/jsp117/Note-Taker/main/public/assets/Images/noteTaker.gif?token=AC3UYQIVOFD6QIC6LXEKSSC7Q75CE)
 
 ## Deployed_link
 [Note Taker](https://note-taker-jsp.herokuapp.com/)
@@ -31,7 +31,7 @@ To run this application locally, open your terminal to the folder it is located 
 ## Code Snippets
 This code snippet displays all Express functions used to display different html files, as well as reading from and writing to the db.json file. 
 
-![Express Functions](./public/assets/images/express.png)
+![Express Functions](https://raw.githubusercontent.com/jsp117/Note-Taker/main/public/assets/Images/express.png?token=AC3UYQLGL4UNBPEF5SNWVXC7Q75AI)
 
 ## Built_with
 * JavaScript
