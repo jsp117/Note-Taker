@@ -8,7 +8,7 @@ class Store {
 
     createNote(note) {
         this.db.push(note);
-        console.log("Create note: ", this.db);
+        // console.log("Create note: ", this.db);
         fs.writeFileSync("./db/db.json", JSON.stringify(this.db));
     }
     deleteNote(id) {
@@ -18,7 +18,7 @@ class Store {
             return note.id !== id;
         });
 
-        console.log("after deletion: ", this.db);
+        // console.log("after deletion: ", this.db);
     }
 }
 
